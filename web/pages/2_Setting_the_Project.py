@@ -16,7 +16,7 @@ response = requests.get(urlneg1)
 if response.status_code == 200:
     image = Image.open(BytesIO(response.content))
     # Display the image using Streamlit
-    st.image(image, caption="This is the confusion matrix of our in house trained model.", use_container_width=True)
+    st.image(image, caption="This is the confusion matrix of our in house trained model.", use_column_width=True)
 else:
     st.error(f"Failed to load image. Status code: {response.status_code}")  # Display an error message
 st.subheader("Identifying the Diseases")
